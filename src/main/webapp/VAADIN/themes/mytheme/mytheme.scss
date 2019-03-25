@@ -1,0 +1,31 @@
+/* Parameters for Valo */
+
+$v-app-background-color: #ffffff;
+$v-font-family: 'Open Sans', sans-serif, 'Source Sans Pro';
+// $v-font-color: black;
+
+/* Import the valo theme.*/
+@import "../runo/runo";
+
+/* This contains all of your theme.*/
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin mytheme {
+  /* Include all the styles from the valo theme */
+  @include runo;
+
+  /* Insert your theme rules here */
+
+  .v-grid-row.grayed {
+    color: grey;
+    font-weight: bold;
+    font-family: $v-font-family;
+  }
+
+  .mybarmenu .v-menubar-menuitem-highlight {
+    background: lightskyblue; /* Dark blue */
+  }
+  .mybarmenu .v-menubar-popup{
+    size: auto;
+  }
+
+}
